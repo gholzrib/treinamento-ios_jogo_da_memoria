@@ -56,7 +56,9 @@ class GameViewController: UIViewController {
     }
     
     func onGameFinished() {
-        self.performSegue(withIdentifier: self.tryAgainSegue, sender: nil)
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1.0, execute: {
+            self.performSegue(withIdentifier: self.tryAgainSegue, sender: nil)
+        })
     }
     
 }
