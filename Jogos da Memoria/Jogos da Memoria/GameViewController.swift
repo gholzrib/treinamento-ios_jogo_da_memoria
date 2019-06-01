@@ -14,7 +14,7 @@ class GameViewController: UIViewController {
     
     lazy var game = Game(numberOfPairOfCards: buttonsArray.count / 2)
     var cardTextProvider: CardTextProvider!
-
+    
     var flipCount : Int = 0 {
         didSet {
             flipCountLabel.text = "flip:\(flipCount)"
@@ -30,6 +30,9 @@ class GameViewController: UIViewController {
             game.chooseCard(at: cardNumber)
             self.updateViewFromModel()
             flipCount += 1
+            if (game.areAllCardsMatched()) {
+                onGameFinished()
+            }
         }
     }
     
@@ -50,7 +53,10 @@ class GameViewController: UIViewController {
                 button.setTitle(" ", for: .normal)
             }
         }
-        self.performSegue(withIdentifier: tryAgainSegue, sender: nil)
+    }
+    
+    func onGameFinished() {
+        self.performSegue(withIdentifier: self.tryAgainSegue, sender: nil)
     }
     
 }

@@ -39,6 +39,10 @@ class Game {
             }
         }
     }
+    
+    func areAllCardsMatched() -> Bool {
+        return cards.allSatisfy({$0.isMatched})
+    }
 }
 
 struct Card {
