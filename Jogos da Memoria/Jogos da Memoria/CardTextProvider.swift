@@ -31,21 +31,21 @@ extension CardTextProvider {
 
 class CuteAnimalsEmojiProvider: CardTextProvider {
     
-    var emojisOptions: Array<String> = ["🐶","🐱","🐸","🐭"]
+    var emojisOptions: Array<String> = ["🐶","🐱","🐸","🐭","🦁","🦊"]
     var emojis: Dictionary<Int, String> = [ : ]
     
 }
 
 class VehiclesEmojiProvider: CardTextProvider {
     
-    var emojisOptions: Array<String> = ["🚗","🚐","🛴","🚞"]
+    var emojisOptions: Array<String> = ["🚗","🚐","🛴","🚞","🚚","🚔"]
     var emojis: Dictionary<Int, String> = [ : ]
     
 }
 
 class NumbersProvider: CardTextProvider {
     
-    var emojisOptions: Array<String> = ["1","2","3","4"]
+    var emojisOptions: Array<String> = ["1","2","3","4","5","6"]
     var emojis: Dictionary<Int, String> = [ : ]
     
 }
